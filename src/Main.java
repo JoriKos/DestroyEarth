@@ -3,12 +3,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        boolean run = true; // variabalen aanmaken 
+        boolean run = true; // variabalen aanmaken
         boolean start = true;
         String lc;
         Scanner s = new Scanner(System.in);
         System.out.println("Type start");
         String startgame;
+
+        String[] goedeKeuzes = new String[10];
+        String[] slechteKeuzes = new String[10];
 
         while(start){
            startgame = s.nextLine(); // Checkt wat er getypt word
@@ -27,4 +30,5 @@ public class Main {
         }}
 
     }
+    
 }
