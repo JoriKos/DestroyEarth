@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        boolean run = true; // variabalen aanmaken
+        boolean run = true; // variabalen aanmaken 
         boolean start = true;
         String lc;
         Scanner s = new Scanner(System.in);
