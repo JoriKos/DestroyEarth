@@ -42,7 +42,7 @@ public class Main {
                 antwoord = s.nextLine();
                 antwoord = antwoord.toLowerCase(); // Kijkt naar antwoord en maakt het lowercase
                 if(i == 0 || i == 2 || i == 3 || i == 6 || i == 9){
-                    if(antwoord.equals("meer")){ // if statement om antwoord te checken
+                    if(antwoord.contains("meer")){ // if statement om antwoord te checken
                         score = score + 1;
                         System.out.println("Je antwoord was goed je krijgt 1 punt");
                         System.out.println("Je score is nu " + score);
