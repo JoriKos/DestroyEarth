@@ -10,16 +10,17 @@ public class Main {
         Scanner s = new Scanner(System.in);
         String antwoord;
         int score = 0;
-        vragenGoed[0] = "\n Moet er meer of minder Nucleaire energie worden gebruikt? "; //Zet vragen in een array
-        vragenGoed[1] = "\n Moet er meer of minder vlees gegeten worden? ";
-        vragenGoed[2] = "\n Moet er meer of minder zonnepanelen worden geplaatst of daken? ";
-        vragenGoed[3] = "\n Moet er meer of minder Productie van vlees komen? ";
-        vragenGoed[4] = "\n Moet er meer of minder geïnvesteerd worden in biomassa? ";
-        vragenGoed[5] = "\n Moet er meer of minder uitlaat gassen van fabrieken in de lucht? ";
-        vragenGoed[6] = "\n Moet er meer of minder afval worden gescheden? ";
-        vragenGoed[7] = "\n Moet er meer of minder fossiele brandstoffen worden verbrand? ";
-        vragenGoed[8] = "\n Moet er meer of minder afval worden verbrand? ";
-        vragenGoed[9] = "\n Moet er meer of minder herbruikbare energie worden gebruikt? ";
+        //Zet vragen in een array
+        vragenGoed[0] = "\n Moet er meer of minder Nucleaire energie worden gebruikt? "; //vraag 1, meer
+        vragenGoed[1] = "\n Moet er meer of minder vlees gegeten worden? "; //vraag 2, minder
+        vragenGoed[2] = "\n Moet er meer of minder zonnepanelen worden geplaatst of daken? ";//vraag 3, meer
+        vragenGoed[3] = "\n Moet er meer of minder Productie van vlees komen? ";//vraag 4, minder
+        vragenGoed[4] = "\n Moet er meer of minder geïnvesteerd worden in biomassa? ";//vraag 5, meer
+        vragenGoed[5] = "\n Moet er meer of minder uitlaat gassen van fabrieken in de lucht? ";//vraag 6, minder
+        vragenGoed[6] = "\n Moet er meer of minder afval worden gescheden? ";//vraag 7, meer
+        vragenGoed[7] = "\n Moet er meer of minder fossiele brandstoffen worden verbrand? ";//vraag 8, minder
+        vragenGoed[8] = "\n Moet er meer of minder afval worden verbrand? "; //vraag 9, minder
+        vragenGoed[9] = "\n Moet er meer of minder herbruikbare energie worden gebruikt? ";//vraag 10, meer
 
 
         System.out.println(" .----------------.  .----------------.  .----------------.  .----------------. \n" +
@@ -33,14 +34,14 @@ public class Main {
                 "| |              | || |              | || |              | || |              | |\n" +
                 "| '--------------' || '--------------' || '--------------' || '--------------' |\n" +
                 " '----------------'  '----------------'  '----------------'  '----------------' " +
-                "\n \n Welkom bij de quiz. Antwoord de volgende vragen om te kijken of je weet wat goed is voor het milieu" + "\n Type 'meer' of 'minder' \n");
+                "\n \n Welkom bij de quiz. Antwoord de volgende vragen om te kijken of je weet wat goed is voor het milieu" + "\n Type 'meer' of 'minder' (check je spelling) \n");
 
         while(run){
             for (int i = 0; i < vragenGoed.length; i++) { // For loop om vragen te stellen
                 System.out.println(vragenGoed[i]);
                 antwoord = s.nextLine();
                 antwoord = antwoord.toLowerCase(); // Kijkt naar antwoord en maakt het lowercase
-                if(i >= 0 && i <= 3){
+                if(i == 0 || i == 2 || i == 3 || i == 6 || i == 9){
                     if(antwoord.equals("meer")){ // if statement om antwoord te checken
                         score = score + 1;
                         System.out.println("Je antwoord was goed je krijgt 1 punt");
@@ -52,73 +53,20 @@ public class Main {
                         System.out.println("Je score is nu " + score);
                     }
 
-                } else if(i == 4){
+                } else{
                     if(antwoord.equals("minder")){
                         score = score + 1;
                         System.out.println("Je antwoord was goed je krijgt 1 punt");
                         System.out.println("Je score is nu " + score);
-                    } else{
-                        score = score - 1;
-                        System.out.println("Je antwoord was fout er gaat 1 punt af ");
-                        System.out.println("Je score is nu " + score);
-                    }
 
-                } else if(i == 5){
-                    if(antwoord.equals("meer")){
-                        score = score + 1;
-                        System.out.println("Je antwoord was goed je krijgt 1 punt");
-                        System.out.println("Je score is nu " + score);
-                    } else{
-                        score = score - 1;
-                        System.out.println("Je antwoord was fout er gaat 1 punt af ");
-                        System.out.println("Je score is nu " + score);
-                    }
-
-                } else if(i == 6){
-                    if(antwoord.equals("minder")){
-                        score = score + 1;
-                        System.out.println("Je antwoord was goed je krijgt 1 punt");
-                        System.out.println("Je score is nu " + score);
-                    } else{
-                        score = score - 1;
-                        System.out.println("Je antwoord was fout er gaat 1 punt af  ");
-                        System.out.println("Je score is nu " + score);
-                    }
-
-                } else if(i == 7){
-                    if(antwoord.equals("meer")){
-                        score = score + 1;
-                        System.out.println("Je antwoord was goed je krijgt 1 punt");
-                        System.out.println("Je score is nu " + score);
-                    } else{
-                        score = score - 1;
-                        System.out.println("Je antwoord was fout er gaat 1 punt af  ");
-                        System.out.println("Je score is nu " + score);
-                    }
-
-                } else if(i >= 8 && i <= 9){
-                    if(antwoord.equals("minder")){
-                        score = score + 1;
-                        System.out.println("Je antwoord was goed je krijgt 1 punt");
-                        System.out.println("Je score is nu " + score);
                     } else{
                         score = score - 1;
                         System.out.println("Je antwoord was fout er gaat 1 punt af");
                         System.out.println("Je score is nu " + score);
                     }
-
-                } else if(i == 10){
-                    if(antwoord.equals("meer")){
-                        score = score + 1;
-                        System.out.println("Je antwoord was goed je krijgt 1 punt");
-                        System.out.println("Je score is nu " + score);
-                    } else{
-                        score = score - 1;
-                        System.out.println("Je antwoord was fout er gaat 1 punt af   ");
-                        System.out.println("Je score is nu " + score);
-                    }
-
                 }
+
+
 
             }
             run = false; // sluit programma af nadat alle vragen zijn gesteld en beantwoord
