@@ -1,6 +1,13 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
+        String[] vragenGoed = new String[10];
+        String[] vragenSlecht = new String[10];
+        boolean run = true;
+        Scanner s = new Scanner(System.in);
+
         System.out.println(" .----------------.  .----------------.  .----------------.  .----------------. \n" +
                 "| .--------------. || .--------------. || .--------------. || .--------------. |\n" +
                 "| |    ___       | || | _____  _____ | || |     _____    | || |   ________   | |\n" +
@@ -11,13 +18,10 @@ public class Main {
                 "| |  `.___.\\__|  | || |    `.__.'    | || |    |_____|   | || |  |________|  | |\n" +
                 "| |              | || |              | || |              | || |              | |\n" +
                 "| '--------------' || '--------------' || '--------------' || '--------------' |\n" +
-                " '----------------'  '----------------'  '----------------'  '----------------' ");
-
-        System.out.println(" \n Welkom bij de quiz. Antwoord de volgende vragen om te kijken of je weet wat goed is voor het milieu");
+                " '----------------'  '----------------'  '----------------'  '----------------' " +
+                "\n \n Welkom bij de quiz. Antwoord de volgende vragen om te kijken of je weet wat goed is voor het milieu");
         int score = 0;
-        String[] vragenGoed = new String[10];
-        String[] vragenSlecht = new String[10];
-        boolean run = true;
+
 
         while(run){
             
