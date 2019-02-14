@@ -1,7 +1,19 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Welkom bij de quiz. Antwoord de volgende vragen om te kijken of je weet wat goed is voor het milieu");
+        System.out.println(" .----------------.  .----------------.  .----------------.  .----------------. \n" +
+                "| .--------------. || .--------------. || .--------------. || .--------------. |\n" +
+                "| |    ___       | || | _____  _____ | || |     _____    | || |   ________   | |\n" +
+                "| |  .'   '.     | || ||_   _||_   _|| || |    |_   _|   | || |  |  __   _|  | |\n" +
+                "| | /  .-.  \\    | || |  | |    | |  | || |      | |     | || |  |_/  / /    | |\n" +
+                "| | | |   | |    | || |  | '    ' |  | || |      | |     | || |     .'.' _   | |\n" +
+                "| | \\  `-'  \\_   | || |   \\ `--' /   | || |     _| |_    | || |   _/ /__/ |  | |\n" +
+                "| |  `.___.\\__|  | || |    `.__.'    | || |    |_____|   | || |  |________|  | |\n" +
+                "| |              | || |              | || |              | || |              | |\n" +
+                "| '--------------' || '--------------' || '--------------' || '--------------' |\n" +
+                " '----------------'  '----------------'  '----------------'  '----------------' ");
+
+        System.out.println(" \n Welkom bij de quiz. Antwoord de volgende vragen om te kijken of je weet wat goed is voor het milieu");
         int score = 0;
         String[] vragenGoed = new String[10];
         String[] vragenSlecht = new String[10];
