@@ -82,7 +82,7 @@ public class Main {
             }
             run = false; // sluit programma af nadat alle vragen zijn gesteld en beantwoord
         }
-        if(score >= 7 && score <= 10){ // checkt je score en geeft aan of je goed geïnformeerd bent
+        if(score > 7 && score <= 10){ // checkt je score en geeft aan of je goed geïnformeerd bent
             System.out.println("\n Je bent goed geïnformeerd over het milieu \n Je score is " + score);
         } else if(score <=7 && score >= 5){
             System.out.println("\n Je bent redelijk goed geïnformeerd over het milieu \n Je score is " + score);
