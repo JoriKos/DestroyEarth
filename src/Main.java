@@ -7,6 +7,7 @@ public class Main {
         String[] vragenGoed = new String[10]; // initialized variabelen
         String[] vragenSlecht = new String[10];
         boolean run = true;
+        boolean spelcheck;
         Scanner s = new Scanner(System.in);
         String antwoord;
         int score = 0;
@@ -39,8 +40,19 @@ public class Main {
         while(run){
             for (int i = 0; i < vragenGoed.length; i++) { // For loop om vragen te stellen
                 System.out.println(vragenGoed[i]);
-                antwoord = s.nextLine();
-                antwoord = antwoord.toLowerCase(); // Kijkt naar antwoord en maakt het lowercase
+                spelcheck = true;
+                antwoord = "hoi";
+                while(spelcheck){
+                    antwoord = s.nextLine();
+                    antwoord = antwoord.toLowerCase(); // Kijkt naar antwoord en maakt het lowercase
+                    if(antwoord.contains("meer") || antwoord.contains("minder")) {
+                        spelcheck = false;
+                    }else{
+                        System.out.println("Typ 'meer' of 'minder'");
+                            spelcheck = true;
+                        }
+
+                    }
                 if(i == 0 || i == 2 || i == 3 || i == 6 || i == 9){
                     if(antwoord.contains("meer")){ // if statement om antwoord te checken
                         score = score + 1;
@@ -63,8 +75,7 @@ public class Main {
                         score = score - 1;
                         System.out.println("Je antwoord was fout er gaat 1 punt af");
                         System.out.println("Je score is nu " + score);
-                    }
-                }
+                    }}
 
 
 
