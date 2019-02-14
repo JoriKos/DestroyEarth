@@ -5,6 +5,11 @@ public class Main {
         int score = 0;
         String[] vragenGoed = new String[10];
         String[] vragenSlecht = new String[10];
+        boolean run = true;
+
+        while(run){
+            
+        }
     }
 
 }
